@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Raven 3.0</title>
+<!-- 
+
+Timeless Template 
+
+http://www.templatemo.com/tm-517-timeless
+
+-->
+    <!-- load CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css') }}">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/templatemo-style.css') }}">
+    <!-- Templatemo style -->
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <header class="text-center tm-site-header">
+                    <div class="tm-site-logo"></div>
+                    <h1 class="pl-4 tm-site-title">Raven 3.0</h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tm-video-container">
+                    <video id="tm-welcome-video" class="tm-welcome-video" autoplay loop muted="">
+                         <source src="{{url_for('static',filename='videos/video.mp4') }}" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+                        <div id="tm-video-loader"></div>
+                        <div id="tm-video-text-overlay" class="tm-video-text-overlay d-none">
+                            <h1>
+                                <div id="rotate" class="tm-video-text">
+                                    <div>This is Raven 3.0</div>
+                                    <div>We are distinguish</div>
+                                    <div>Quite recognizable</div>
+                                    <div>and expose</div>
+                                </div>
+                            </h1>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container tm-container-2">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="tm-welcome-text">Welcome to Raven 3.0</h2>
+                </div>
+            </div>
+            <div class="row tm-section-mb">
+                <div class="col-lg-12">
+                    <div class=" tm-timeline-item">
+                        <div class="tm-timeline-item-inner">
+                            <img src="{{url_for('static',filename='img/img-01.jpg') }}" alt="Image" class="rounded-circle tm-img-timeline">
+                            <div class="tm-timeline-connector">
+                                <p class="mb-0">&nbsp;</p>
+                            </div>
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark tm-timeline-description">
+                                    <h3 class="tm-text-green tm-font-400">About Us</h3>
+                                    <p class="about-text">With the increasing number of violent incidents that are happening frequently,the safety of people is compromised.The various occurences of such incidents are captured by video survelliance techniques.The violent fights,the agreesive protests,riots and violent crowd behavior have challenged public safety.</p>
+									<blockquote>
+										<p>Hence in order to provide the society with a safe evironment we propose the method with most accuracy to detect violence in video surveillance.It includes the various machine learning and deep learning algorithms to divide the video in image frames and perform analysis to detect these events on time to ensure public safety.</p>
+									</blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tm-timeline-connector-vertical"></div>
+                    </div>
+
+                    <div class="tm-timeline-item">
+                        <div class="tm-timeline-item-inner">
+                            <img src="{{url_for('static',filename='img/img-02.jpg') }}" alt="Image" class="rounded-circle tm-img-timeline">
+                            <div class="tm-timeline-connector">
+                                <p class="mb-0">&nbsp;</p>
+                            </div>
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark tm-timeline-description">
+										<div class="row">
+											<div class="text-center section-heading">
+												<h3 class="tm-text-green tm-font-400">Violence detection using browsing files: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+												
+											</div>
+											<form method="POST" action="/run">
+												<div class="tm-text-yellow section-heading">
+												<!--<form action="/action_page.php">method=post,action=\text1
+													<label for="myfile">Select a file:</label><br>
+													<input type="file" id="myfile" name="myfile"><br><br>
+													<input type="submit" value="Submit">
+												</form>-->
+													<h6>Enter path to video file</h6><br>
+													<input type="text" name="video_file" placeholder="Path to video file">
+													<button type="submit" value="submit">Submit</button>
+												</div><br><br>
+											</form>
+										</div>	
+									</div>
+                            	</div>
+                        	</div>
+                        <div class="tm-timeline-connector-vertical"></div>
+                    </div>
+
+                    <div class="tm-timeline-item">
+                        <div class="tm-timeline-item-inner">
+                            <img src="{{url_for('static',filename='img/img-03.jpg') }}" alt="Image" class="rounded-circle tm-img-timeline">
+                            <div class="tm-timeline-connector">
+                                <p class="mb-0">&nbsp;</p>
+                            </div>
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark tm-timeline-description">
+                                    <h3 class="tm-text-green tm-font-400">Violence Detection using live streaming:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                                    <p>Open IP webinar app and enter ip address to start live streaming.</p>
+                                    <div class="tm-text-green section-heading">
+										<form method="POST" action="/run1">
+											
+											<input type="text" name="ip" placeholder="IP address for live streaming"><br><br>
+											<button type="submit" value="submit">Submit</button>
+										</form>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-timeline-connector-vertical"></div>
+                    </div>
+
+                    <div class="tm-timeline-item">
+                        <div class="tm-timeline-item-inner">
+                            <img src="{{url_for('static',filename='img/img-04.jpg') }}" alt="Image" class="rounded-circle tm-img-timeline">
+                            <div class="tm-timeline-connector">
+                                <p class="mb-0">&nbsp;</p>
+                            </div>
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark-light tm-timeline-description">
+                                    <h3 class="tm-text-orange tm-font-400">Lorem ipsum dolor sit amet</h3>
+                                    <p>Phasellus at quam facilisis sem congue lacinia. Fusce risus velit, bibendum in magna eu, sollicitudin pellentesque dolor. Nulla facilisi. Fusce libero mauris, maximus et liqula at.</p>
+                                    <p class="tm-text-orange float-right mb-0">New Project . 22 June 2018</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!--  row -->
+            <hr>
+            
+                <!--<div class="col-lg-4 col-md-4 col-sm-12 pr-lg-5 mb-md-0 mb-4">
+                    <h3 class="mt-2 mb-3 tm-text-gray"></h3>
+                    <p>Integer imperdiet aliquet lobortis. In in metus risus. Pellentesque pulvinar venenatis dui id rutrum. In
+                    pharetra neque et eleifend venenatis.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 pr-lg-5 mb-md-0 mb-4">
+                    <h3 class="mt-2 mb-3 tm-text-gray">Morbi ultrices tellus</h3>
+                    <p>Integer imperdiet aliquet lobortis. In in metus risus. Pellentesque pulvinar venenatis dui id rutrum. In
+                    pharetra neque et eleifend venenatis.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h3 class="mt-2 mb-3 tm-text-gray">Suspendisse dolor tortor</h3>
+                    <p>Integer imperdiet aliquet lobortis. In in metus risus. Pellentesque pulvinar venenatis dui id rutrum. In
+                    pharetra neque et eleifend venenatis.</p>
+                </div>-->
+
+                <div class="tm-container-2">
+					<div class="text-center section-heading">
+						<h2 class="tm-text-green tm-font-400">The team</h2>
+						<div class="tm-text-yellow">Meet the people that made it all happen.</div>
+					</div>
+				</div><br>
+				<div class="row align-center">
+					<div class="pixova-team col-sm-3 pixova-lite-team-member-1">
+						<img class="pixova-team-img" src="https://colorlib.com/pixova-lite/wp-content/uploads/sites/18/2017/09/teammembru-150x150.jpg" alt="Angelina Doe">
+						<div class="pixova-team-member-name">Siddhi Dhonsale</div>
+						<div class="pixova-team-description">
+							<div class="pixova-team-member-icons">
+								<div class="pixova-team-member-icon">
+									<a rel="nofollow" href="https://www.facebook.com/colorlib/">
+										<i class="fa fa-facebook-official"></i>
+									</a>
+								</div>
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="https://www.dribbble.com/colorlib">
+									<i class="fa fa-dribbble"></i>
+								</a>
+							</div>
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="mailto:contact@site.com">
+									<i class="fa fa-envelope"></i>
+								</a>
+							</div>
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="https://www.linkedin.com/">
+									<i class="fa fa-linkedin"></i>
+								</a>
+							</div>
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="https://pinterest.com/">
+									<i class="fa fa-pinterest"></i>
+								</a>
+							</div>
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="https://twitter.com/colorlib">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</div>
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="https://plus.google.com/">
+									<i class="fa fa-google-plus"></i>
+								</a>
+							</div>
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="https://www.instagram.com/">
+									<i class="fa fa-instagram"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div> 
+				<div class="pixova-team col-sm-3 pixova-lite-team-member-2">
+				<img class="pixova-team-img" src="https://colorlib.com/pixova-lite/wp-content/uploads/sites/18/2017/09/teammembru3-150x150.jpg" alt="Angelina Doe">
+				<div class="pixova-team-member-name">Sheetal Laturiya</div>
+				<div class="pixova-team-description">
+					<div class="pixova-team-member-icons">
+						<div class="pixova-team-member-icon">
+							<a rel="nofollow" href="https://www.facebook.com/colorlib/">
+								<i class="fa fa-facebook-official"></i>
+							</a>
+						</div>
+						<div class="pixova-team-member-icon">
+							<a rel="nofollow" href="https://www.dribbble.com/madalin.duca/">
+								<i class="fa fa-dribbble"></i>
+							</a>
+						</div>
+						<div class="pixova-team-member-icon">
+							<a rel="nofollow" href="mailto:contact@site.com">
+								<i class="fa fa-envelope"></i>
+							</a>
+						</div>
+						<div class="pixova-team-member-icon">
+							<a rel="nofollow" href="https://www.linkedin.com/silkalns">
+								<i class="fa fa-linkedin"></i>
+							</a>
+						</div>
+						<div class="pixova-team-member-icon">
+							<a rel="nofollow" href="https://pinterest.com/colorlib">
+								<i class="fa fa-pinterest"></i>
+							</a>
+						</div>
+						<div class="pixova-team-member-icon">
+							<a rel="nofollow" href="https://twitter.com/colorlib">
+								<i class="fa fa-twitter"></i></a>
+							</div>
+						</div>
+					</div>
+				</div> 
+				<div class="pixova-team col-sm-3 pixova-lite-team-member-3">
+					<img class="pixova-team-img" src="https://colorlib.com/pixova-lite/wp-content/uploads/sites/18/2017/09/teammembru-150x150.jpg" alt="Angelina Doe">
+					<div class="pixova-team-member-name">Dnyaneshwari Kakad</div>
+					<div class="pixova-team-description">
+						<div class="pixova-team-member-icons">
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="https://www.facebook.com/colorlib/">
+									<i class="fa fa-facebook-official"></i>
+								</a>
+							</div>
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="https://www.dribbble.com/colorlib/">
+									<i class="fa fa-dribbble"></i>
+								</a>
+							</div>
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="mailto:contact@site.com">
+									<i class="fa fa-envelope"></i>
+								</a>
+							</div>
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="https://twitter.com/colorlib">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div> 
+				<div class="pixova-team col-sm-3 pixova-lite-team-member-4">
+					<img class="pixova-team-img" src="https://colorlib.com/pixova-lite/wp-content/uploads/sites/18/2017/09/teammembru4-150x150.jpg" alt="Angelina Doe">
+					<div class="pixova-team-member-name">Shreeya Pattani</div>
+					<div class="pixova-team-description">
+						<div class="pixova-team-member-icons">
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="https://www.facebook.com/colorlib/">
+									<i class="fa fa-facebook-official"></i>
+								</a>
+							</div>
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="https://www.dribbble.com/colorlib/">
+									<i class="fa fa-dribbble"></i>
+								</a>
+							</div>
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="https://www.linkedin.com/">
+									<i class="fa fa-linkedin"></i>
+								</a>
+							</div>
+							<div class="pixova-team-member-icon">
+								<a rel="nofollow" href="https://twitter.com/colorlib">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div> 
+			
+            </div>
+            <hr>
+            <div class="row tm-section-mt">
+                <div class="col-lg-6">
+                    <h3 class="mb-4 tm-text-gray">Our Location</h3>
+                    <!-- GOOGLE MAP -->
+                    <div id="google-map" class="text-center mb-5">
+                    <!-- How to change your own map point
+                           1. Go to Google Maps
+                           2. Click on your location point
+                           3. Click "Share" and choose "Embed map" tab
+                           4. Copy only URL and paste it within the src="" field below
+                       -->
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945"
+                       class="google-map-iframe" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                   </div>
+               </div>
+               <div class="col-lg-6 mb-5">
+                <h3 class="mb-4 tm-text-gray">Contact Us</h3>
+                <form action="#contact" method="post" class="tm-contact-form">
+                    <div class="row">
+                        <div class="form-group col-xl-6">
+                            <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name..." required/>
+                        </div>
+                        <div class="form-group col-xl-6">
+                            <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email..." required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="Your Message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn  tm-btn-send">Send It</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <!-- Footer -->
+        <footer class="row mt-5 mb-5">
+            <div class="col-lg-12">
+                <p class="text-center tm-text-gray tm-copyright-text mb-0">Copyright &copy;
+                    <span class="tm-current-year">2020</span> S.S.D.S.S 
+                    
+                    | Design: Template
+                </p>
+            </div>
+        </footer>
+    </div>
+    <!-- .container -->
+
+    <script src="{{url_for('static',filename='js/jquery.min.js') }}"></script>
+    <!-- <script src="js/jquery-3.2.1.slim.min.js"></script> -->
+    <script src="{{url_for('static',filename='js/templatemo-script.js') }}"></script>
+
+</body>
+</html>
